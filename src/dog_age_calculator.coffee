@@ -18,4 +18,27 @@ class @DogAgeCalculator
   addClass: (show_class) ->
     DogAgeCalculator._classes.push show_class
 
-  calculate: (dog) ->
+  ageOf: (dog) ->
+    today = new Date()
+    dogage = {}
+    if today > dog.birth_date
+      dateDogAge = today - dog.birth_date
+      yearAsMS = 1000 * 60 * 60 * 24 * 365
+      monthAsMS = 1000 * 60 * 60 * 24 * 30
+      weekAsMS = 1000 * 60 * 60 * 24 * 7
+      dayAsMS = 1000 * 60 * 60 * 24
+      dogage.years = parseInt(dateDogAge / yearAsMS, 10)
+      if dogage.years > 0
+        dateDogAge = dateDogAge - (dogage.years * yearAsMS)
+
+      dogage.months = parseInt(dateDogAge / monthAsMS, 10)
+      if dogage.months > 0
+        dateDogAge = dateDogAge - (dogage.months * monthAsMS)
+
+      dogage.weeks = parseInt(dateDogAge / weekAsMS, 10)
+      if dogage.weeks > 0
+        dateDogAge = dateDogAge - (dogage.weeks * weekAsMS)
+
+      dogage.days = parseInt(dateDogAge / dayAsMS, 10)
+    dogage
+
