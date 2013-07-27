@@ -5,9 +5,27 @@
     <title>Dog age calculator</title>
     <meta content='Calculator for dog show people. Give the birth date of your dog and check which classes s/he can be informed in.' name='description'>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link type="text/css" href="css/ui-lightness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
   </head>
   <body>
+    <div id="counter">
+    <h1>Koiran ikä</h1>
+    <p>Laske milloin koira on osallistumiskelpoinen näyttelyluokkiin.</p>
+    <form method="get" id="counter-form" action="#">
+    <label for="birthdate">Syntymäaika:</label>
+    <input type="text" size="10" maxlength="10" name="birthdate" id="birthdate" />
+    <input type="submit" name="submit" id="submit" value="Laske"/>
+    </form>
+    </div>
+    <div id="results" style="display:none">
+    <p>Koiran ikä nyt: <span id="ageNow"></span></p>
+    <h2>Luokat</h2>
+    <table>
+    </table>
+    </div>
+
     <script src='js/vendor/jquery-2.0.3.min.js'></script>
+    <script src='js/vendor/jquery-ui-1.10.3.custom.min.js'></script>
     <script src='js/application.js'></script>
     <script src='js/dog.js'></script>
     <script src='js/show_class.js'></script>
