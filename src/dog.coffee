@@ -1,3 +1,3 @@
 class @Dog
-  constructor: (@name, date) ->
+  constructor: (date, @name = '') ->
     @birthDate = new Date(date)
