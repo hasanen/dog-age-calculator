@@ -50,11 +50,11 @@ class @DogAgeCalculator
       showClassDates = {}
       showClassDates.title = @title
       if @minAge > 0
-        newMinMonths = parseInt(dateArray[1], 10) + (@minAge - 1)
+        newMinMonths = parseInt(dateArray[1], 10) + @minAge
         showClassDates.minAgeDate = calc.calculateNewDate(dateArray[0],newMinMonths, dateArray[2])
 
       if @maxAge > 0
-        newMaxMonths = parseInt(dateArray[1], 10) + (@maxAge - 1)
+        newMaxMonths = parseInt(dateArray[1], 10) + @maxAge
         newMaxdays = parseInt(dateArray[0], 10) - 1
         showClassDates.maxAgeDate = calc.calculateNewDate(newMaxdays, newMaxMonths, dateArray[2])
 
