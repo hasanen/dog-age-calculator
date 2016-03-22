@@ -1,0 +1,25 @@
+{
+  "name": "dog-age-calculator",
+  "version": "1.0.0",
+  "description": "Simple calculator for calculating dog's age",
+  "main": "index.html",
+  "dependencies": {
+    "coffee": "^3.2.1",
+    "coffee-script": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "coffee -c -o js src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasanen/dog-age-calculator.git"
+  },
+  "author": "Joni Hasanen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasanen/dog-age-calculator/issues"
+  },
+  "homepage": "https://github.com/hasanen/dog-age-calculator#readme"
+}
